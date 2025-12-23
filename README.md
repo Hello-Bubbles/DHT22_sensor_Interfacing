@@ -1,7 +1,12 @@
 # DHT22 ↔ STM32F411 (Register-Level) – README
+This project demonstrates bare-metal one-wire style communication between an STM32 (STM32F411) and a DHT22/AM2302 temperature-humidity sensor. The DHT22 uses a timing-based digital protocol (no I²C/SPI/UART), so the STM32 must generate an accurate start pulse and then decode 40 bits by measuring microsecond-level HIGH pulse widths (≈24 µs for ‘0’, ≈65 µs for ‘1’).
 
-This project documents how to interface a **DHT22 (AM2302)** temperature & humidity sensor with an **STM32F411** using a **timer input-capture** method to measure pulse widths reliably.
-> Goal: read the DHT22’s 40-bit frame (Humidity, Temperature, Checksum) using STM32 timers and GPIO, then convert to physical values.
+Key highlights:
+Uses a hardware timer (TIM2) for µs timing and edge/timeout handling.
+Implements the full frame decode: humidity + temperature + checksum validation.
+Shows practical embedded lessons: GPIO open-drain, pull-up behavior, pin selection pitfalls (e.g., avoiding pins tied to onboard UART), and robust timeout-based polling.
+You can use it as a reference for sensor interfacing, precise timing, and protocol decoding on STM32 without HAL drivers.
+
 ## Tools & Hardware Used
 ### Development / Debug
 - **STM32CubeIDE**  
