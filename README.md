@@ -167,7 +167,7 @@ Temperature:
 
 Checksum:
 - sum = (Hh + Hl + Th + Tl) & 0xFF
-- Must equal `checksum`
+- Must equal checksum
 
 
 
