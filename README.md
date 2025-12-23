@@ -236,13 +236,7 @@ In time[] (HIGH widths):
     decimal:731
   -Name:temp
      decimal:266	
----
 
-## 12) GitHub Notes (Recommended)
-
-Even if it’s a small project, it’s worth uploading because it shows:
-- register-level STM32 work (GPIO, TIM input capture, NVIC)
-- timing/protocol decoding (DHT22)
 - debugging with a logic analyzer (PulseView)
 
   
