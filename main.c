@@ -145,8 +145,11 @@ int main(void)
     uint16_t temp=(bits_to_data(16)<<8);
 	temp=temp|bits_to_data(24);
     uint8_t  chksum=bits_to_data(32);
+	float humidity= hum/10.0;
+	float temperature=temp/10.0;
 	for(;;);
 }
+
 
 
 
