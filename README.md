@@ -227,7 +227,15 @@ In time[] (HIGH widths):
 - Then 40 values in two clusters:
   - ~20–35 µs (bit 0)
   - ~60–80 µs (bit 1)
-
+  - exmaple outputs:
+  - Name : bits
+	     Details:{0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0}
+  -	Name : time
+      Details:{72, 24, 24, 24, 23, 24, 23, 66, 23, 66, 66, 24, 66, 66, 24, 66, 66, 24, 24, 24, 24, 24, 24, 24, 65, 24, 23, 24, 23, 66, 23, 66, 24, 65, 65, 66, 23, 65, 23, 23, 23}
+  - Name: humd
+    decimal:731
+  -Name:temp
+     decimal:266	
 ---
 
 ## 12) GitHub Notes (Recommended)
@@ -236,5 +244,7 @@ Even if it’s a small project, it’s worth uploading because it shows:
 - register-level STM32 work (GPIO, TIM input capture, NVIC)
 - timing/protocol decoding (DHT22)
 - debugging with a logic analyzer (PulseView)
+
+  
 
 
