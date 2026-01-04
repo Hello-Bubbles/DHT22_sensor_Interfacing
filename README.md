@@ -35,30 +35,6 @@ You can use it as a reference for sensor interfacing, precise timing, and protoc
 
  If your DHT22 is a breakout module, it may already include a pull-up resistor. If not sure, add an external pull-up.
 
----
-## Flow
-
-MCU (STM32F411)
-   |
-   |  GPIO (Open-Drain) — Start Pulse
-   v
-DATA Line (with Pull-up)
-   ^
-   |  Sensor drives pulses
-   |
-DHT22 Sensor
-   |
-   |  HIGH pulse widths encode bits
-   v
-TIM2 Input Capture (PA0 / CH1)
-   |
-   |  Rising/Falling edge timestamps
-   v
-Pulse Width Measurement (µs)
-   |
-   |  Threshold decode (0 / 1)
-   v
-40-bit Frame → Bytes → Physical Values
 
 ----
 ## 2) How DHT22 Communication Works
